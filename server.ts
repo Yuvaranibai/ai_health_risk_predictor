@@ -6,9 +6,7 @@ import cors from "cors";
 
 import fs from "fs";
 
-const IS_PROD = process.env.NODE_ENV === "production";
-const DB_PATH = IS_PROD ? "/var/data/healthcare.db" : "healthcare.db";
-const db = new Database(DB_PATH);
+const db = new Database("healthcare.db");
 
 // Load hospitals from JSON
 const hospitalsData = JSON.parse(fs.readFileSync(path.join(process.cwd(), "hospitals.json"), "utf-8"));
