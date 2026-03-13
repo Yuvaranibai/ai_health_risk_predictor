@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: ai-health-risk-predictor
+    env: node
+    plan: free # Change to productive if needed
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GEMINI_API_KEY
+        sync: false # Set in Render Dashboard
+      - key: APP_URL
+        fromContext: git_url
+    disk:
+      name: healthcare-data
+      mountPath: /var/data
+      sizeGB: 1
