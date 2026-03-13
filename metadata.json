@@ -1,0 +1,9 @@
+{
+  "name": "Remix: Remix: AI Preventive Health Risk Predictor",
+  "description": "An intelligent health screening assistant for rural healthcare, providing early risk detection, symptom analysis, and hospital mapping.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
